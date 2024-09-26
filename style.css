@@ -1,0 +1,511 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial;
+    transition: all 0.05s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/* Container for background image */
+.container {
+    background-image: url("images/image.jpg");
+    background-size: cover;
+}
+
+/* Section styling */
+section {
+    padding: 100px;
+}
+
+/* Banner section with video background */
+.banner {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center text vertically */
+    padding-bottom: 65px;
+}
+
+#topBackground{
+    position: relative; /* Make this container the reference point for absolute positioning */
+    width: 100%; /* Adjust as needed */
+    height: 100vh;
+}
+
+#firstComp{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#video{
+    position: absolute; /* Position it relative to the container */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure video covers entire banner */
+    z-index: -1; /* Put video behind the text */
+}
+
+/* Banner text styling */
+.banner h2 {
+    font-size: 3em;
+    color: rgb(10, 9, 8);
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: center; /* Center text horizontally */
+}
+
+.banner h2 span {
+    font-size: 1.5em;
+    color: rgb(14, 12, 12);
+    font-family: 'Akronim', cursive;
+}
+
+.banner h3 {
+    font-size: 1.5em;
+    color: rgb(63, 106, 245);
+    font-weight: 500;
+}
+
+/* Button styling */
+.btn {
+    position: relative;
+    background-color: none;
+    display: inline-block;
+    border: 3px solid rgb(39, 255, 1);
+    color: rgb(39, 255, 1);
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: chartreuse;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Akronim', cursive;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: rgb(63, 106, 245);
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: chartreuse;
+    font-weight: bolder;
+}
+
+header.sticky ul li a:hover {
+    color: chartreuse;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header.sticky .logo {
+    color: chartreuse;
+    font-family: 'Akronim', cursive;
+}
+
+header.sticky ul li a {
+    color: #000;
+}
+
+/* Heading and other section styling */
+.color {
+    color: chartreuse;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.about h2 {
+    color: chartreuse;
+}
+
+.about .content p {
+    font-weight: 200;
+}
+
+.about .content p strong {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentBx {
+    padding-right: 30px;
+}
+
+.contentBx h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.w50 {
+    max-width: 50%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.services {
+    background-color: #ADD9DD;
+}
+
+.heading.white {
+    color: #f93434;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background: #d7e0d8;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+}
+
+.services .content .servicesBx:hover {
+    background-color: chartreuse;
+    cursor: pointer;
+}
+
+.services .content .servicesBx img {
+    max-width: 280px;
+}
+
+.servicesBx:hover color {
+    color: #999;
+}
+
+.services .content .servicesBx h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.services .content .servicesBx p {
+    color: #999;
+}
+
+.services .content .servicesBx:hover p {
+    color: #f7f7f7;
+}
+
+.work .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn:hover {
+    border: 2px solid rgb(39, 255, 1);
+    background-color: rgb(39, 255, 1);
+    color: #fff;
+}
+
+.work .btn:hover {
+    color: #fff;
+}
+
+.work .content .workBx {
+    width: 50%;
+    padding: 20px;
+}
+
+.work .content .workBx img {
+    max-width: 100%;
+}
+
+.contact {
+    background-color: #111;
+}
+
+/* Responsive Behaviour */
+@media (max-width: 1190px) {
+    header, header.sticky {
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 20px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .w50 {
+        max-width: 100%;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .banner {
+        padding: 100px 50px;
+    }
+
+    .contentBx {
+        margin: 1rem 0;
+        padding-right: 0;
+    }
+
+    .about {
+        padding: 100px 20px;
+    }
+
+    .services {
+        padding: 100px 30px;
+    }
+
+    .work {
+        padding: 100px 30px;
+    }
+
+    .work .content .workBx {
+        width: 100%;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .contact h2 {
+        font-size: 21px;
+        margin-bottom: 1rem;
+    }
+
+    .contact {
+        padding: 100px 20px;
+    }
+
+    .contact form h3 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .contact p {
+        margin-bottom: 1rem;
+    }
+
+    header ul li a {
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .menu.active {
+        left: 0%;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background: url('menu.png') no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle.active {
+        background: url('close.png') no-repeat;
+        background-position: center;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    header.sticky .toggle {
+        filter: invert(1);
+    }
+}
+
+@media (max-width: 440px) {
+    footer .sec {
+        margin-top: 1rem;
+    }
+
+    .sec.aboutus {
+        margin-bottom: 3em;
+    }
+
+    .sec p, .sec h2 {
+        width: 250px;
+        align-items: justify;
+    }
+}
+section#slides_parent {
+    padding-bottom: 150px;
+}
+
+.slides {
+    display: flex;
+    justify-content: center;
+}
+
+.slides h4 {
+    color: #444;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.slide_1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    min-width: 60px;
+    height: 300px;
+    border-radius: 40px;
+    margin: 0 15px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+
+.slide_1:hover {
+    min-width: 250px;
+}
+
+.slide_1:hover .slide_info {
+    transform: rotate(0deg);
+    left: 20px;
+    bottom: 20px;
+    font-size: 22px;
+}
+
+.slide_2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i2.jpg);
+}
+
+.slide_3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i3.jpg);
+}
+
+.slide_4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i4.jpg);
+}
+
+
+
+.slide_6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i6.jpg);
+}
+
+.slide_7 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/recipe_slides/i7.jpg);
+}
+
+.slide_info {
+    position: absolute;
+    bottom: 51px;
+    color: #fff;
+    transform: rotate(-90deg);
+    right: 0px;
+    font-weight: 700;
+    font-size: 12px;
+}
+.footer-par {
+    flex-direction: column;
+    text-align: center;
+}
+
+.explore-info {
+    margin: 0 auto;
+}
+
+}
+
+@media screen and (max-width:950px) {}
