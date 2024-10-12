@@ -44,3 +44,7 @@ If you used a specific library or API for the India map, provide details on how 
 Consider adding screenshots or a short video to demonstrate the project's features.
 If your project has any dependencies or requirements, list them here.
 By following these guidelines, you'll create a well-structured and informative README file that effectively communicates the purpose and value of your "SIH Culture and Heritage of India" project.
+
+
+
+http://127.0.0.1:5500/index.html
